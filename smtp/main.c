@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
   send_smtp(socket, "DATA\n", response, sizeof(response));
   printf("%s\n", response);
 
-  char dataCommand[8096];
+  char dataCommand[4096];
   snprintf(dataCommand, sizeof(dataCommand), "%s\r\n.\r\n", emailMessage);
   printf("%s\n", dataCommand);
   send_smtp(socket, dataCommand, response, sizeof(response));

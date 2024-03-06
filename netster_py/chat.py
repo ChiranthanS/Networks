@@ -152,4 +152,3 @@ def chat_client(host:str, port:int, use_udp:bool) -> None:
         if (last_sent_message == "goodbye\n" and response_from_server == "farewell\n") or \
            (last_sent_message == "exit\n" and response_from_server == "ok\n"):
             sys.exit()
-
